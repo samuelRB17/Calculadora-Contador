@@ -21,6 +21,8 @@ const Contador = () => {
       setContador(contador - numero);
     } else if (operador === "*") {
       setContador(contador * numero);
+    }else if (operador === "/") {
+      setContador(contador / numero);
     } else {
 
       setContador(numero);
@@ -42,6 +44,10 @@ const Contador = () => {
   const Multiplicar = () => {
     ejecutarOperacion();
     setOperador("*");
+  };
+  const Dividir = () => {
+    ejecutarOperacion();
+    setOperador("/");
   };
 
   const Igual = () => {
@@ -89,7 +95,8 @@ const Contador = () => {
       <button onClick={Sumar}>+</button>
       <button onClick={Restar}>-</button>
       <button onClick={Multiplicar}>X</button>
-      <button onClick={Igual}>=</button>
+      <button onClick={Dividir}>/</button>
+    
       <button onClick={Reset}>Reset</button>
       <br></br>
       <button onClick={Igual}>=</button>
@@ -98,3 +105,5 @@ const Contador = () => {
 };
 
 export default Contador;
+
+
